@@ -15,12 +15,12 @@ public interface UserMapper {
     @Select("select * from user")
     public List<User> findUsers();
 
-    @Select("select * from user where name = ?")
-    public User getUser(String name);
+    @Select("select * from user where id = ?")
+    public User getUser(Integer id);
 
     @Update("update user set username = ? , password=? where id=?")
     public Integer updateUser(String name, String password, Integer id);
 
-    @Delete("delete from user where name=?")
-    public void deleteUser(String name);
+    @Delete("delete from user where id=?")
+    public Integer deleteUser(Integer id);
 }
