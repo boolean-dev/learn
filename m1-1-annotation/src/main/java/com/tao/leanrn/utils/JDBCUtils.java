@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 /**
  * @ClassName JDBCUtils
- * @Descriiption TODO
+ * @Descriiption jdbc连接工具类
  * @Author yanjiantao
  * @Date 2019/6/28 16:24
  **/

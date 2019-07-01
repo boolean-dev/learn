@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * @ClassName DaoOperatorHandler
- * @Descriiption TODO
+ * @Descriiption 数据库操作处理器
  * @Author yanjiantao
  * @Date 2019/6/27 11:39
  **/
@@ -30,10 +30,11 @@ public class DaoOperatorHandler {
         if (method.isAnnotationPresent(Insert.class)) {
             sql = checkSql(method.getAnnotation(Insert.class).value(), Insert.class.getSimpleName());
             insert(sql, parameters);
-
+        // 更新
         }else if (method.isAnnotationPresent(Update.class)) {
             sql = checkSql(method.getAnnotation(Update.class).value(), Update.class.getSimpleName());
             return update(sql, parameters);
+        // 查询
         }else if (method.isAnnotationPresent(Select.class)) {
             sql = checkSql(method.getAnnotation(Select.class).value(), Select.class.getSimpleName());
             Class returnType = method.getReturnType();
@@ -51,6 +52,13 @@ public class DaoOperatorHandler {
         return null;
     }
 
+    /**
+     * 插入
+     * @param sql sql
+     * @param parameters    参数
+     * @throws SQLException SQLException
+     * @throws ClassNotFoundException   ClassNotFoundException
+     */
     private static void insert(String sql, Object[] parameters) throws SQLException, ClassNotFoundException {
         Connection connection = JDBCUtils.getConnection();
         PreparedStatement statement =  connection.prepareStatement(sql);
@@ -61,6 +69,13 @@ public class DaoOperatorHandler {
         connection.close();
     }
 
+    /**
+     * 插入
+     * @param sql sql
+     * @param parameters    参数
+     * @throws SQLException SQLException
+     * @throws ClassNotFoundException   ClassNotFoundException
+     */
     private static Integer update(String sql, Object[] parameters) throws SQLException, ClassNotFoundException {
         Connection connection = JDBCUtils.getConnection();
         PreparedStatement statement =  connection.prepareStatement(sql);
@@ -72,6 +87,14 @@ public class DaoOperatorHandler {
         return result;
     }
 
+    /**
+     * 插入
+     * @param sql sql
+     * @param parameters    参数
+     * @return List<T>
+     * @throws SQLException SQLException
+     * @throws ClassNotFoundException   ClassNotFoundException
+     */
     private static  <T> List<T> selectMany(String sql, Object[] parameters) throws SQLException, ClassNotFoundException {
         Connection connection = JDBCUtils.getConnection();
         PreparedStatement statement =  connection.prepareStatement(sql);
@@ -84,6 +107,13 @@ public class DaoOperatorHandler {
     }
 
 
+    /**
+     * 检查sql
+     * @param sql   sql
+     * @param type  type
+     * @return  the sql
+     * @throws SQLException SQLException
+     */
     private static String checkSql(String sql, String type) throws SQLException {
         String sqlType = sql.split(" ")[0];
         if (!sqlType.equalsIgnoreCase(type)) {
@@ -92,10 +122,4 @@ public class DaoOperatorHandler {
         return sql;
     }
 
-    private static String buildSql(String sql, Object[] paras) throws SQLException {
-        for (Object para : paras) {
-            sql.replaceFirst(para.toString(), "{}");
-        }
-        return sql;
-    }
 }

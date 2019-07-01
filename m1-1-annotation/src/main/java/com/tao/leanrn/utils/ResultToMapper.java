@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 /**
  * @ClassName ResultToMapper
- * @Descriiption TODO
+ * @Descriiption mysql查询结果转换为实体bean
  * @Author yanjiantao
  * @Date 2019/6/28 17:35
  **/
@@ -26,7 +26,6 @@ public class ResultToMapper<T> {
 
         List<T> result = null;
         try {
-
             while (resultSet.next()) {
                 T bean = (T) clazz.newInstance();
                 ResultSetMetaData metaData = resultSet.getMetaData();

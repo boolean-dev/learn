@@ -4,7 +4,7 @@ import lombok.Data;
 
 /**
  * @ClassName User
- * @Descriiption TODO
+ * @Descriiption 用户实体类
  * @Author yanjiantao
  * @Date 2019/6/28 15:24
  **/
