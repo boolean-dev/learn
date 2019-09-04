@@ -18,6 +18,7 @@
 	<modules>
 		<module>m1-1-annotation</module>
 		<module>m1-2-thread</module>
+		<module>m1-3-demo</module>
 	</modules>
 
 	<properties>
