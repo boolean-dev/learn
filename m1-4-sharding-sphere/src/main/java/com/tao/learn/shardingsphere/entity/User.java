@@ -18,7 +18,7 @@ public class User {
      * id
      */
     @TableId(type= IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     /**
      * 姓名
