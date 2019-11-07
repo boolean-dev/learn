@@ -51,7 +51,7 @@ public class User implements Serializable{
     /**
      * 修改时间
      */
-    private LocalDateTime updateTime;
+    private LocalDateTime updateTime ;
 
 
 
