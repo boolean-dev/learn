@@ -7,3 +7,5 @@ spring:
 logging:
   level:
     com.tao.learn.mybatisplug.quickstart.mapper: debug
+mybatis-plus:
+  type-enums-package: com.tao.learn.mybatisplug.quickstart.enums

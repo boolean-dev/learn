@@ -3,6 +3,8 @@ package com.tao.learn.mybatisplug.quickstart.controller;
 import com.tao.learn.mybatisplug.quickstart.entity.User;
 import com.tao.learn.mybatisplug.quickstart.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,5 +35,10 @@ public class UserController {
     public Boolean insert(User user) {
         user.setCreateTime(LocalDateTime.now()).setUpdateTime(LocalDateTime.now());
         return userService.save(user);
+    }
+
+    @DeleteMapping(name = "/del")
+    public Object delete(Long id) {
+        return userService.removeById(id);
     }
 }

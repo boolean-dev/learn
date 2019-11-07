@@ -1,6 +1,8 @@
 package com.tao.learn.mybatisplug.quickstart.entity;
 
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.tao.learn.mybatisplug.quickstart.enums.Gender;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -41,7 +43,7 @@ public class User implements Serializable{
     /**
      * 性别：0无，1男，2女
      */
-    private Integer sex;
+    private Gender gender;
 
     /**
      * 创建时间
@@ -53,6 +55,10 @@ public class User implements Serializable{
      */
     private LocalDateTime updateTime ;
 
-
+    /**
+     * 是否删除
+     */
+    @TableLogic
+    private Integer isDelete;
 
 }
