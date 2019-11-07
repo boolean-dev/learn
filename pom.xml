@@ -20,6 +20,7 @@
 		<module>m1-2-thread</module>
 		<module>m1-3-demo</module>
 		<module>m1-4-sharding-sphere</module>
+		<module>m1-5-mybatis-plug</module>
 	</modules>
 
 	<properties>
