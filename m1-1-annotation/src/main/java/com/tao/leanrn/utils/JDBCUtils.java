@@ -16,7 +16,7 @@ public class JDBCUtils {
         String username = "root";
         String password = "root123456";
 
-        return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mybatis?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8", username, password);
+        return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mybatis-generator?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=GMT%2B8", username, password);
     }
 
 

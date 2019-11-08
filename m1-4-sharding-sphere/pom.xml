@@ -6,7 +6,7 @@
 		<groupId>com.tao</groupId>
 		<artifactId>learn</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.learn</groupId>
 	<artifactId>m1-4-sharding-sphere</artifactId>
@@ -20,7 +20,7 @@
 
 	<dependencies>
 
-		<!--mybatis -->
+		<!--mybatis-generator -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>

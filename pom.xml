@@ -21,6 +21,7 @@
 		<module>m1-3-demo</module>
 		<module>m1-4-sharding-sphere</module>
 		<module>m1-5-mybatis-plug</module>
+		<module>m1-6-mybatis-generator</module>
 	</modules>
 
 	<properties>
@@ -50,6 +51,21 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>maven-ali</id>
+			<url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
