@@ -5,6 +5,7 @@ import com.tao.learn.sharding.entity.User;
 import com.tao.learn.sharding.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -39,5 +40,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(Long id) {
         userDao.deleteById(id);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public List<User> transaction(User user) {
+        userDao.deleteById(user.getId());
+        return userDao.findAll();
     }
 }

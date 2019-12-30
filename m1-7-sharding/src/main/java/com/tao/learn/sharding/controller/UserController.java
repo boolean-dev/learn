@@ -27,6 +27,11 @@ public class UserController {
         return userService.findAll();
     }
 
+    @GetMapping("/transaction")
+    public List<User> transaction(@RequestBody User user) {
+        return userService.transaction(user);
+    }
+
     @PostMapping("/")
     public User save(@RequestBody User user) {
         return userService.save(user);

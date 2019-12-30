@@ -19,4 +19,6 @@ public interface UserService {
     void update(User user);
 
     void delete(Long id);
+
+    List<User> transaction(User user);
 }
