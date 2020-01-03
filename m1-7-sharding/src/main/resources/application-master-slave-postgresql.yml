@@ -1,32 +1,4 @@
-#spring:
-#  shardingsphere:
-#    datasource:
-#      names: master,slave0,slave1
-#    master:
-#      type: com.alibaba.druid.pool.DruidDataSource
-#      driver-class-name: org.postgresql.Driver
-#      url: jdbc:postgresql://localhost:5432/master
-#      username: postgres
-#      password: postgres
-#    slave0:
-#      type: com.alibaba.druid.pool.DruidDataSource
-#      driver-class-name: org.postgresql.Driver
-#      url: jdbc:postgresql://localhost:5432/slave0
-#      username: postgres
-#      password: postgres
-#    slave1:
-#      type: com.alibaba.druid.pool.DruidDataSource
-#      driver-class-name: org.postgresql.Driver
-#      url: jdbc:postgresql://localhost:5432/slave1
-#      username: postgres
-#      password: postgres
-#    masterslave:
-#      name: ms
-#      master-data-source-name: master
-#      slave-data-source-names: slave0,slave1
-#    props:
-#      sql:
-#        show: true
+# PostgreSQL读写分离，采用druid作为datasource
 spring:
   shardingsphere:
     datasource:
@@ -34,7 +6,7 @@ spring:
       master:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://localhost:5432/slave1
+        url: jdbc:postgresql://localhost:5432/slave0
         username: postgres
         password: postgres
       slave0:
@@ -46,7 +18,7 @@ spring:
       slave1:
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://localhost:5432/slave1
+        url: jdbc:postgresql://localhost:5432/slave2
         username: postgres
         password: postgres
     masterslave:

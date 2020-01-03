@@ -8,6 +8,6 @@ spring:
         show_sql: true
 
   profiles:
-    active: master-slave
+    active: master-slave-postgresql-hikari
   main:
     allow-bean-definition-overriding: true
