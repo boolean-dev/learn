@@ -1,5 +1,6 @@
 package com.tao.learn.sharding.controller;
 
+import com.tao.learn.sharding.dao.TestAopDao;
 import com.tao.learn.sharding.entity.User;
 import com.tao.learn.sharding.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private TestAopDao testAopDao;
 
     @GetMapping("/")
     public List<User> findAll() {
@@ -54,4 +58,24 @@ public class UserController {
         result.put("msg", "更新成功");
         return result;
     }
+
+    @GetMapping("/test1")
+    public Object test1() {
+        testAopDao.fun1();
+        Map<String, Object> result = new HashMap<>(2);
+        result.put("code", 200);
+        result.put("msg", "更新成功");
+        return result;
+    }
+
+    @GetMapping("/test2")
+    public Object test2() {
+        testAopDao.fun2();
+        Map<String, Object> result = new HashMap<>(2);
+        result.put("code", 200);
+        result.put("msg", "更新成功");
+        return result;
+    }
+
+
 }
