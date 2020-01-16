@@ -1,0 +1,11 @@
+server:
+  port: 8888
+
+zuul:
+  routes:
+    learn:
+      path: /api/**
+      url: http://127.0.0.1:8080/api
+  host:
+    connect-timeout-millis: 25000
+    socket-timeout-millis: 25000
