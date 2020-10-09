@@ -28,8 +28,6 @@
 .vscode/
 /logs/
 /example.iml
-/m1-8-zuul/.mvn/
-/**/.mvn/
 /*/.gitignore
 /*/.mvn/
 /*/*/.mvn/
