@@ -16,12 +16,12 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
-		<module>m1-1-annotation</module>
-		<module>m1-2-thread</module>
-		<module>m1-3-demo</module>
-		<module>m1-4-sharding-sphere</module>
-		<module>m1-5-mybatis-plug</module>
-		<module>m1-6-mybatis-generator</module>
+		<module>01-annotation</module>
+		<module>02-thread</module>
+		<module>03-demo</module>
+		<module>04-sharding-sphere</module>
+		<module>05-mybatis-plug</module>
+		<module>06-mybatis-generator</module>
 	</modules>
 
 	<properties>
