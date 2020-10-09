@@ -24,6 +24,7 @@
 		<module>06-mybatis-generator</module>
 		<module>07-sharding</module>
 		<module>08-zuul</module>
+		<module>09-spring-cloud-gateway-demo</module>
 	</modules>
 
 	<properties>
