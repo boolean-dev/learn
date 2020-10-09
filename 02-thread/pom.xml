@@ -9,7 +9,7 @@
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.leanrn</groupId>
-	<artifactId>m1-2-thread</artifactId>
+	<artifactId>thread</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>thread</name>
 	<description>Demo project for Spring Boot</description>

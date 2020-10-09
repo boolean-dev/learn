@@ -9,7 +9,7 @@
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.learn</groupId>
-	<artifactId>m1-4-sharding-sphere</artifactId>
+	<artifactId>sharding-sphere</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sharding-sphere</name>
 	<description>Demo project for Spring Boot</description>

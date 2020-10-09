@@ -22,6 +22,8 @@
 		<module>04-sharding-sphere</module>
 		<module>05-mybatis-plug</module>
 		<module>06-mybatis-generator</module>
+		<module>07-sharding</module>
+		<module>08-zuul</module>
 	</modules>
 
 	<properties>

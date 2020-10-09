@@ -9,7 +9,7 @@
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.leanrn</groupId>
-	<artifactId>m1-1-annotation</artifactId>
+	<artifactId>annotation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>m1-1-annotation</name>
 	<description>Demo project for Spring Boot</description>

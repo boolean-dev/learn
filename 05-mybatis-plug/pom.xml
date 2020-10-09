@@ -9,7 +9,7 @@
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.learn</groupId>
-	<artifactId>m1-5-mybatis-plug</artifactId>
+	<artifactId>mybatis-plug</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>m1-5-mybatis-generator-plug</name>
 	<description>Demo project for Spring Boot</description>

@@ -9,7 +9,7 @@
 		<relativePath>../pom.xml</relativePath><!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tao.leanrn.demo</groupId>
-	<artifactId>m1-3-demo</artifactId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>m1-3-demo</name>
 	<description>Demo project for Spring Boot</description>
