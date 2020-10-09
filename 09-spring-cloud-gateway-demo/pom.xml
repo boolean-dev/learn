@@ -16,7 +16,7 @@
     <description>Demo project for Spring Boot</description>
 
     <modules>
-        <module>demo</module>
+        <module>server-demo</module>
         <module>gateway-demo</module>
     </modules>
 

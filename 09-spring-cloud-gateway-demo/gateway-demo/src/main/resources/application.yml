@@ -1,1 +1,15 @@
+server:
+  port: 8090
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: demo
+          uri: http://127.0.0.1:8091
+          predicates:
+            - name: demo
+              args:
+                - path: /api.demo
+
 
