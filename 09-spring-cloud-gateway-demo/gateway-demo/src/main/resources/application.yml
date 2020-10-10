@@ -1,15 +1,31 @@
 server:
   port: 8090
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 spring:
   cloud:
     gateway:
       routes:
         - id: demo
           uri: http://127.0.0.1:8091
+          order: 10
           predicates:
-            - name: demo
-              args:
-                - path: /api.demo
-
+            - Path=/api/test1/**,/api/test2/demo1,/api/test3/**
+#            - Path=/api/test1/**
+#            - Path=/api/test2/demo1
+#            - Path=/api/test3/**
+          filters:
+            - StripPrefix=1   # 去除/api的前缀
+        - id: jd
+          uri: http://www.jd.com:80
+          order: 5
+          predicates:
+            - Path=/api/jd
+          filters:
+            - StripPrefix=1
 

@@ -1,4 +1,4 @@
-package com.booleandev.gateway.gatewaydemo;
+package com.booleandev.gateway.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

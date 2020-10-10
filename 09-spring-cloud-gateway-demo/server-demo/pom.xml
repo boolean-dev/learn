@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.booleandev.gateway</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>server-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>server-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

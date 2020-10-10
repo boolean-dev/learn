@@ -1,4 +1,4 @@
-package com.booleandev.gateway.gatewaydemo;
+package com.booleandev.gateway.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
