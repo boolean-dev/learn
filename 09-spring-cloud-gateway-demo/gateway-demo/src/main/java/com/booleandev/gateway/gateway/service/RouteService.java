@@ -2,8 +2,10 @@ package com.booleandev.gateway.gateway.service;
 
 import com.booleandev.gateway.gateway.dao.RouteRepository;
 import com.booleandev.gateway.gateway.entity.Route;
+import com.booleandev.gateway.gateway.route.MyRouteDefinitionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
@@ -21,11 +23,15 @@ public class RouteService {
     @Autowired
     private RouteRepository routeRepository;
 
+    @Autowired
+    private MyRouteDefinitionRepository myRouteDefinitionRepository;
+
     public List<Route> findAll() {
         return routeRepository.findAll();
     }
 
     public Route insert(Route route) {
+        myRouteDefinitionRepository.save(Mono.empty());
         return routeRepository.save(route);
     }
 
