@@ -35,6 +35,7 @@ public class MyRouteDefinitionRepository implements RouteDefinitionRepository {
 
     @Override
     public Flux<RouteDefinition> getRouteDefinitions() {
+        log.info("加载路由信息......");
         List<Route> allRoute =  routeService.findAll();
         List<RouteDefinition> routeDefinitionList = new ArrayList<>(allRoute.size());
         Gson gson = new Gson();

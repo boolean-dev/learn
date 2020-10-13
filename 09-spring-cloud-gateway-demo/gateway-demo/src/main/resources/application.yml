@@ -8,6 +8,10 @@ management:
         include: '*'
 
 spring:
+  kafka:
+    bootstrap-servers: http://localhost:9092
+    consumer:
+      group-id: gateway-group-3
   jpa:
     database: mysql
     show-sql: true
