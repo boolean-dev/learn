@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.gateway.event.RefreshRoutesEvent;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.kafka.core.KafkaTemplate;
+//import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.concurrent.CountDownLatch;
@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
  * @date 10/12/2020 10:02 AM
  */
 @Slf4j
-@Component
-public class KafkaProducer {
+//@Component
+public class KafkaProducer {}/*{
 
     @Autowired
     private KafkaTemplate<String, String> template;
@@ -45,4 +45,4 @@ public class KafkaProducer {
 
     }
 
-}
+}*/

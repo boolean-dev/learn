@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.reactive.function.server.ServerRequest;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,14 +21,14 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/kafka")
-public class KafkaController {
+public class KafkaController {}/*{
 
     @Autowired
     private KafkaProducer producer;
 
 
     @GetMapping("/send")
-    public Object send() {
+    public Object send(ServerRequest request) {
         producer.send();
 
         Map<String,Object> result = new HashMap<>();
@@ -47,4 +48,4 @@ public class KafkaController {
         result.put("msg", "success");
         return result;
     }
-}
+}*/

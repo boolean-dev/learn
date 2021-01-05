@@ -25,6 +25,8 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: 2543
+          uri:
         - id: demo
           uri: http://127.0.0.1:8091
           order: 10
