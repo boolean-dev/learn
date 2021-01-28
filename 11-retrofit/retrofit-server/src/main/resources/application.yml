@@ -1,0 +1,10 @@
+server:
+  port: 9100
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: trace
